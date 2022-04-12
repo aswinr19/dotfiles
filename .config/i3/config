@@ -221,5 +221,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 1 # decrease screen brightnes
 bindsym XF86TouchpadToggle exec ./toggletouchpad.sh # toggle touchpad
 
 #screenshot
-bindsym shift+Print exec scrot 
+bindsym shift+Print exec scrot '%Y-%m-%d-%h-%m-%s_$wx$h.png'  -e 'mv $f ~/Pictures/screenshots/' 
 
