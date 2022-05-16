@@ -5,6 +5,9 @@ set number
 "provides tab-completion for all file related tasks
 set path+=**
 
+"display all matching files when we tab complete
+set wildmenu
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'tabnine/YouCompleteMe'
