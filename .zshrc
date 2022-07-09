@@ -8,9 +8,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="eastwood"
 
-ZSH_THEME="eastwood"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,10 +72,12 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -100,7 +102,5 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
 # Example aliases
  alias zshconfig="vim ~/.zshrc"
- alias ohmyzsh="vim ~/.oh-my-zsh"
- alias hello="~/./hello.sh"
- alias spotify="flatpak run com.spotify.Client"
- alias telegram="flatpak run org.telegram.desktop"
+ alias ohmyzsh="vim  ~/.oh-my-zsh"
+  
