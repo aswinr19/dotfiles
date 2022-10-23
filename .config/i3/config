@@ -303,7 +303,7 @@ assign [class="mpv"] $ws5
 assign [class="feh"] $ws6
 assign [class="TelegramDesktop"] $ws8
 assign [class="Evince"] $ws9
-assign [class="Gthumb"] $ws9
+assign [class="Gthumb"] $ws10
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Alacritty] focus
