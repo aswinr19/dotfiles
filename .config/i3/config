@@ -183,8 +183,8 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +0.5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 0.5)%"
-bindsym XF86MonBrightnessDown exec xbacklight -0.5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 0.5)%"
+bindsym XF86MonBrightnessUp exec xbacklight +1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+bindsym XF86MonBrightnessDown exec xbacklight -1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
 # change focus
 bindsym $mod+j focus left
@@ -276,12 +276,12 @@ set $ws1 "1: Terminal "
 set $ws2 "2: Firefox"
 set $ws3 "3: VSCode"
 set $ws4 "4: Files"
-set $ws5 "5: Vlc Player"
+set $ws5 "5: Media Player"
 set $ws6 "6: Image Viewer "
 set $ws7 "7: Free Workspace "
 set $ws8 "8: Telegram Desktop"
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws9 "9: Pdf Reader"
+set $ws10 "10 Image Viewer:"
 
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
@@ -298,8 +298,11 @@ assign [class="(?i)firefox"] $ws2
 assign [class="code"] $ws3
 assign [class="Thunar"] $ws4
 assign [class="vlc"] $ws5
+assign [class="mpv"] $ws5
 assign [class="feh"] $ws6
 assign [class="TelegramDesktop"] $ws8
+assign [class="Evince"] $ws9
+assign [class="Gthumb"] $ws9
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Alacritty] focus
@@ -307,8 +310,11 @@ for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=code] focus
 for_window [class=vlc] focus
+for_window [class=mpv] focus
 for_window [class=feh] focus
 for_window [class=TelegramDesktop] focus
+for_window [class=Evince] focus
+for_window [class=Gthumb] focus
 
 #full screen windows
 for_window [class="code"] fullscreen enable
@@ -468,9 +474,9 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$darkgrey		$darkgrey
+client.focused		    $black	$black  	$white		$darkgrey		$darkgrey
 client.unfocused	    $darkblue	$darkblue	$grey		$purple		$black
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
+client.focused_inactive	    $darkblue	$darkblue	$grey		$purple		$black
 client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 
 ############################################
@@ -545,21 +551,21 @@ strip_workspace_numbers no
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
 bindsym $mod+d exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+		-config ~/.config/rofi/config.rasi
 
-#bindsym F9 exec rofi -modi drun -show drun \
+# bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
-bindsym $mod+t exec rofi -show window \
+ bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
 
 bindsym $mod+Shift+d exec rofi -show emoji 
 
 
 #bindsym F10 exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
+#		-config ~/.config/rofi/config.rasi
 
 
 
@@ -568,4 +574,4 @@ bindsym $mod+Shift+d exec rofi -show emoji
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 
-exec --no-startup-id xbacklight -2.5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 0.5)%"
+exec --no-startup-id xbacklight -2.5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 2.5)%"
