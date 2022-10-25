@@ -103,4 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim  ~/.oh-my-zsh"
+ alias bton="doas systemctl start bluetooth && blueberry"
+ alias btoff="doas systemctl stop bluetooth"
   
