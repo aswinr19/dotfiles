@@ -321,7 +321,6 @@ for_window [class=Gthumb] focus
 #full screen windows
 #for_window [class="code"] fullscreen enable
 for_window [class="Evince"] fullscreen enable
-for_window [class="Alacritty"] fullscreen enable
 ##############
 # compositor #
 ##############
