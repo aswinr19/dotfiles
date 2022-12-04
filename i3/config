@@ -149,7 +149,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 #        bindsym Escape mode "default"
 #}
 
-#bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 
 ######################################
 # keybindings for different actions: #
@@ -321,6 +321,7 @@ for_window [class=Gthumb] focus
 #full screen windows
 #for_window [class="code"] fullscreen enable
 for_window [class="Evince"] fullscreen enable
+for_window [class="Alacritty"] fullscreen enable
 ##############
 # compositor #
 ##############
