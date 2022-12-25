@@ -38,8 +38,8 @@ new_window pixel 1
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 0 
-gaps outer 0 
+#gaps inner 0 
+#gaps outer 0 
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -183,8 +183,14 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-bindsym XF86MonBrightnessDown exec xbacklight -1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+#bindsym XF86MonBrightnessUp exec xbacklight +1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+#bindsym XF86MonBrightnessDown exec xbacklight -1 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+
+bindsym XF86MonBrightnessUp exec xbacklight +1
+bindsym XF86MonBrightnessDown exec xbacklight -1
+
+bindsym Shift+XF86MonBrightnessUp exec xbacklight +10
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -10
 
 # change focus
 bindsym $mod+j focus left
@@ -249,6 +255,9 @@ bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill 
 # mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
+#unmute 
+
+
 # audio control
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -260,11 +269,14 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+n exec /usr/bin/thunar
+#bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks 
+bindsym $mod+n exec /usr/bin/pcmanfm
+
+#screenshot
 bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
-bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+#bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -296,8 +308,8 @@ set $ws10 "10 Image Viewer:"
 assign [class="Alacritty"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="Chromium"] $ws2
-assign [class="code"] $ws3
-assign [class="Thunar"] $ws4
+assign [class="Code"] $ws3
+assign [class="Pcmanfm"] $ws4
 assign [class="vlc"] $ws5
 assign [class="mpv"] $ws5
 assign [class="feh"] $ws6
@@ -309,8 +321,8 @@ assign [class="Gthumb"] $ws10
 for_window [class=Alacritty] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Chromium] focus
-for_window [class=Thunar] focus
-for_window [class=code] focus
+for_window [class=Pcmanfm] focus
+for_window [class=Code] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
 for_window [class=feh] focus
@@ -329,6 +341,7 @@ for_window [class="Evince"] fullscreen enable
 # uncomment one of them to be used (picom package is installed per default)
 # options could need changes, related to used GPU and drivers.
 # to find the right setting consult the archwiki or ask at the forum.
+#
 #
 # xcompmgr: https://wiki.archlinux.org/title/Xcompmgr
 # manpage: https://man.archlinux.org/man/xcompmgr.1.en
@@ -364,8 +377,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id dex --autostart --environment i3
 
-# start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
 #exec --no-startup-id numlockx on
@@ -403,16 +414,6 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # alternative if you installed aside with XFCE4:
 # exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-
-# autotiling script
-# https://github.com/nwg-piotr/autotiling
-# `yay -S autotiling ;) (it is in AUR)
-#exec_always --no-startup-id autotiling
-
-# Autostart apps as you like
-#exec --no-startup-id sleep 2 && xfce4-terminal
-#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-#exec --no-startup-id sleep 3 && thunar
 
 ###############
 # system tray #
@@ -487,33 +488,33 @@ client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
-bar {
-		font pango: Noto Sans Regular 8 
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position bottom
+#bar {
+#		font pango: Noto Sans Regular 8 
+#		status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	    	position bottom
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    tray_output primary
-		    tray_padding 0  
+#		    tray_output primary
+#		    tray_padding 0  
 
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-strip_workspace_numbers no 
+#strip_workspace_numbers no 
 ##strip_workspace_name no
-
-		    colors {
-		    separator          $purple
-		    background         $black
-		    statusline         $white
-#                          		border 		        bg		txt		indicator
-		focused_workspace       #285577	         	#285577	        $white         	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	#2B2B2B   		#2B2B2B         $grey   	$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
-	}
-}
+#
+#	    colors {
+#		    separator          $purple
+#		    background         $black
+#		    statusline         $white
+#                        		border 		        bg		txt		indicator
+#		focused_workspace       #285577	         	#285577	        $white         	$purple
+#		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
+#		inactive_workspace	#2B2B2B   		#2B2B2B         $grey   	$purple
+#		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+#	}
+#}
 
 # you can add different bars for multidisplay setups on each display:
 # set output HDMI-0 to the display you want the bar, --transparency can be set.
@@ -556,12 +557,12 @@ bindsym $mod+d exec rofi -modi drun -show drun \
 		-config ~/.config/rofi/config.rasi
 
 # bindsym F9 exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
+#		-config ~/.config/rofi/config.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
  bindsym $mod+t exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+		-config ~/.config/rofi/config.rasi
 
 bindsym $mod+Shift+d exec rofi -show emoji 
 
@@ -574,6 +575,8 @@ bindsym $mod+Shift+d exec rofi -show emoji
 #exec --no-startup-id greenclip daemon>/dev/null
 #bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 #		-config ~/.config/rofi/rofidmenu.rasi
+#temporary fix for backlight problem 
+exec --no-startup-id xbacklight -2.5 
 
-
-exec --no-startup-id xbacklight -2.5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 2.5)%"
+#launch polybar
+exec --no-startup-id ~/.config/polybar/launch.sh
