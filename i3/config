@@ -289,8 +289,8 @@ set $ws2 "2: Browser"
 set $ws3 "3: VSCode"
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
-set $ws6 "6: Image Viewer "
-set $ws7 "7: Free Workspace "
+set $ws6 "6: Image Viewer"
+set $ws7 "7: Spotify"
 set $ws8 "8: Telegram Desktop"
 set $ws9 "9: Pdf Reader"
 set $ws10 "10 Image Viewer:"
@@ -313,6 +313,7 @@ assign [class="Pcmanfm"] $ws4
 assign [class="vlc"] $ws5
 assign [class="mpv"] $ws5
 assign [class="feh"] $ws6
+assign [class="Spotify"] $ws7
 assign [class="TelegramDesktop"] $ws8
 assign [class="Evince"] $ws9
 assign [class="Gthumb"] $ws10
@@ -326,6 +327,7 @@ for_window [class=Code] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
 for_window [class=feh] focus
+for_window [class=Spotify] focus
 for_window [class=TelegramDesktop] focus
 for_window [class=Evince] focus
 for_window [class=Gthumb] focus
