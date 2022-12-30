@@ -7,5 +7,7 @@ ln -s ~/Documents/configs/zsh/.zshrc ~/
 ln -s ~/Documents/configs/i3 ~/.config/
 ln -s ~/Documents/config/polybar ~/.config/
 
+#root permission needed for running this line
+ln -s ~/Documents/config/X11 /etc/X11
 
 #also make the ploybar launch script executable 
