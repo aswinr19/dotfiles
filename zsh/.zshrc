@@ -100,9 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+#  aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim  ~/.oh-my-zsh"
- alias bton="doas systemctl start bluetooth && blueberry"
- alias btoff="doas systemctl stop bluetooth"
-  
+#  alias bton="doas systemctl start bluetooth && blueberry"
+#  alias btoff="doas systemctl stop bluetooth"
+#  alias nvim="flatpak run io.neovim.nvim"
