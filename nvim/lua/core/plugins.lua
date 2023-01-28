@@ -16,6 +16,15 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
+  use 'ellisonleao/gruvbox.nvim'
+  use 'RRethy/nvim-base16'
+  use 'kyazdani42/nvim-palenight.lua'
+  use 'nvim-treesitter/nvim-treesitter'
+  use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
+        requires = {{ 'nvim-lua/plenary.nvim' }}
+      }
 
   -- My plugins here
   -- use 'foo1/bar1.nvim'

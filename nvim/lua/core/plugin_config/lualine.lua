@@ -1,9 +1,9 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'base16-onedark',
+    theme = 'onedark',
   },
-  section = {
+  sections = {
     lualine_a = {
       {
         'filename',
