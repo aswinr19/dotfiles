@@ -198,6 +198,36 @@ colors:
     white:   '#abb2bf'
 
 
+#Macos terminal colorscheme
+# colors:
+
+#   primary:
+#     background: '#000000'
+#     foreground: '#70E000'
+
+#   # Normal colors
+#   normal:
+#     black:   '#70E000'
+#     red:     '#70E000'
+#     green:   '#70E000'
+#     yellow:  '#70E000'
+#     blue:    '#70E000'
+#     magenta: '#70E000'
+#     cyan:    '#70E000'
+#     white:   '#70E000'
+
+#   # Bright colors
+#   bright:
+#     black:   '#70E000'
+#     red:     '#70E000'
+#     green:   '#70E000'
+#     yellow:  '#70E000'
+#     blue:    '#70E000'
+#     magenta: '#70E000'
+#     cyan:    '#70E000'
+#     white:   '#70E000'
+
+
 
 # Colors (Wombat)
 # colors:
