@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 #  aliases
- alias zshconfig="vim ~/.zshrc"
- alias ohmyzsh="vim  ~/.oh-my-zsh"
+ alias zshconfig="nvim ~/.zshrc"
+ alias ohmyzsh="nvim  ~/.oh-my-zsh"
+ alias upgrade="sudo apt update && sudo apt upgrade -y"
 #  alias bton="doas systemctl start bluetooth && blueberry"
 #  alias btoff="doas systemctl stop bluetooth"
 #  alias nvim="flatpak run io.neovim.nvim"
