@@ -1,14 +1,16 @@
 #!/bin/bash
 
+release_file=/etc/os-release
 
-if [ -d /etc/pacman.d ]
+if grep -q "Arch" release_file
   then
     #if host is based on arch linux run the pacman update command followed by package installs 
     sudo pacman -Syu
 fi
 
 
-if [ -d /etc/apt ]
+
+if grep -q "Debian" release_file || grep -q "Ubuntu" release_file
   then
     #if the host is based on debian or ubuntu based ,
     #updating mirrors and upgrading packages and installing necessary packages.
