@@ -16,7 +16,7 @@ if grep -q "Debian" release_file || grep -q "Ubuntu" release_file
     #updating mirrors and upgrading packages and installing necessary packages.
     sudo apt update && 
     sudo apt upgrade && 
-    sudo apt install i3 lightdm lightmd-settings slick-greeter xbacklight lxappearence pulseaudio pavucontrol gcc git zsh curl vlc firefox 
+    sudo apt install i3 lightdm lightmd-settings slick-greeter xbacklight lxappearence pulseaudio pavucontrol plybar git zsh curl cargo vlc firefox 
 
 fi
 #build alacrittty neovim from source
