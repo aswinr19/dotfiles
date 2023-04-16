@@ -285,11 +285,11 @@ bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && no
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal "
-set $ws2 "2: Browser"
+set $ws2 "2: Firefox"
 set $ws3 "3: VSCode"
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
-set $ws6 "6: Postman"
+set $ws6 "6: Chromium"
 set $ws7 "7: Spotify"
 set $ws8 "8: Telegram Desktop"
 set $ws9 "9: Pdf Reader"
@@ -307,12 +307,12 @@ set $ws10 "10 Image Viewer:"
 # bind program to workspace and focus to them on startup:
 assign [class="Alacritty"] $ws1
 assign [class="(?i)firefox"] $ws2
-assign [class="Chromium"] $ws2
+#assign [class="Chromium"] $ws2
 assign [class="Code"] $ws3
 assign [class="Pcmanfm"] $ws4
 assign [class="vlc"] $ws5
 assign [class="mpv"] $ws5
-assign [class="Postman"] $ws6
+assign [class="Chromium"] $ws6
 assign [class="Spotify"] $ws7
 assign [class="TelegramDesktop"] $ws8
 assign [class="Evince"] $ws9
