@@ -358,10 +358,10 @@ for_window [class="Evince"] fullscreen enable
 # For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
 #
 # using default config 
-#exec_always --no-startup-id picom -b
+exec_always --no-startup-id picom -b
 #
 # for custom config:
-exec_always --no-startup-id picom --config  ~/.config/picom.conf
+#exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -578,6 +578,5 @@ bindsym $mod+Shift+d exec rofi -show emoji
 #		-config ~/.config/rofi/rofidmenu.rasi
 #temporary fix for backlight problem 
 exec --no-startup-id xbacklight -2.5 
-
 #launch polybar
 exec --no-startup-id ~/.config/polybar/launch.sh
