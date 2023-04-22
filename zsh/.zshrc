@@ -36,6 +36,7 @@ source $ZSH/oh-my-zsh.sh
  alias zshconfig="nvim ~/.zshrc"
  alias ohmyzsh="nvim  ~/.oh-my-zsh"
  alias upgrade="sudo apt update && sudo apt upgrade -y"
+ alias autoremove="sudo apt autoremove -y"
 #  alias bton="doas systemctl start bluetooth && blueberry"
 #  alias btoff="doas systemctl stop bluetooth"
 #  alias nvim="flatpak run io.neovim.nvim"
