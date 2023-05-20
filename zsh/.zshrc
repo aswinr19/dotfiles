@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="nvim  ~/.oh-my-zsh"
  alias upgrade="sudo apt update && sudo apt upgrade -y"
  alias autoremove="sudo apt autoremove -y"
+ alias edit-wifi="sudo nvim /etc/netplan/00-installer-config.yaml"
 #  alias bton="doas systemctl start bluetooth && blueberry"
 #  alias btoff="doas systemctl stop bluetooth"
 #  alias nvim="flatpak run io.neovim.nvim"
