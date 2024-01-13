@@ -42,6 +42,7 @@ source $ZSH/oh-my-zsh.sh
  alias ga="git add"
  alias gs="git status"
  alias gc="git commit -m"
+ alias gp="git push"
 #  alias bton="doas systemctl start bluetooth && blueberry"
 #  alias btoff="doas systemctl stop bluetooth"
 #  alias nvim="flatpak run io.neovim.nvim"
