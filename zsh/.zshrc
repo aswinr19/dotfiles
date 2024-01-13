@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 #  aliases
  alias zshconfig="nvim ~/.zshrc"
  alias ohmyzsh="nvim  ~/.oh-my-zsh"
- alias upgrade="doas dnf update && doas dnf upgrade -y"
+ alias upgrade="doas dnf update -y && doas dnf upgrade -y"
  alias autoremove="sudo doas autoremove -y"
  alias edit-wifi="sudo nvim /etc/netplan/00-installer-config.yaml"
  alias gl="git log"

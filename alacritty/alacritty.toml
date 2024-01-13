@@ -51,7 +51,7 @@ render_timer = false
 size = 16
 
 [font.bold]
-family = "monospace"
+family = "JetBrainsMono"
 style = "Bold"
 
 [font.glyph_offset]
@@ -59,13 +59,12 @@ x = 0
 y = 4
 
 [font.italic]
-family = "monospace"
+family = "JetBrainsMono"
 style = "Italic"
 
 [font.normal]
-family = "monospace"
-#family = "JetBrainsMono"
-
+family = "JetBrainsMono"
+#family = "monospace"
 
 [font.offset]
 x = 0
