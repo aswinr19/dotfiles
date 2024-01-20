@@ -134,16 +134,20 @@ bindsym $mod+a focus parent
 # open new empty workspace
 bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
 # Multimedia Keys
-# volume
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-# gradular volume control
-bindsym Shift+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym Shift+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
-# mute
-bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
-#unmute 
 
+# volume
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+# gradular volume control
+#bindsym Shift+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+#bindsym Shift+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+# mute
+#bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 
 # audio control
 bindsym XF86AudioPlay exec playerctl play
@@ -157,7 +161,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/firefox
 #bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks 
-bindsym $mod+n exec /usr/bin/pcmanfm
+bindsym $mod+n exec /usr/bin/thunar
 
 #screenshot
 bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
@@ -173,14 +177,14 @@ bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && no
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal "
 set $ws2 "2: Browser" 
-set $ws3 "3: VSCode"
+set $ws3 "3: "
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
 set $ws6 "6: Firefox"
 set $ws7 "7: Spotify"
 set $ws8 "8: Telegram Desktop"
 set $ws9 "9: Pdf Reader"
-set $ws10 "10 Image Viewer:"
+set $ws10 "10: Image Viewer"
 
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
@@ -195,19 +199,19 @@ assign [class="Alacritty"] $ws1
 assign [class="(?i)Chromium"] $ws2 
 assign [class="firefox"] $ws2
 assign [class="Code"] $ws3
-assign [class="Pcmanfm"] $ws4
+assign [class="Thunar"] $ws4
 assign [class="vlc"] $ws5
-assign [class="mpv"] $ws5
+#assign [class="mpv"] $ws5
 #assign [class="firefox"] $ws2
 assign [class="Spotify"] $ws7
-assign [class="TelegramDesktop"] $ws8
+#assign [class="TelegramDesktop"] $ws8
 assign [class="Evince"] $ws9
 assign [class="Eog"] $ws10
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Alacritty] focus
 for_window [class=Chromium] focus
 for_window [class=firefox] focus
-for_window [class=Pcmanfm] focus
+for_window [class=Thunar] focus
 for_window [class=Code] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
@@ -291,5 +295,30 @@ bindsym $mod+Shift+d exec rofi -show emoji
 #temporary fix for backlight problem 
 exec --no-startup-id xbacklight -2.5 
 #launch polybar
-exec --no-startup-id ~/.config/polybar/launch.sh
+#exec --no-startup-id ~/.config/polybar/launch.sh
 
+# class                 border  bground text    indicator child_border
+client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
+client.focused_inactive #8C8C8C #4C4C4C #FFFFFF #4C4C4C   #8C8C8C
+client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
+client.urgent           #EC69A0 #DB3279 #FFFFFF #DB3279   #DB3279
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+  colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
+
+    focused_workspace  #83CAFA #51A2DA #FFFFFF
+    active_workspace   #3C6EB4 #294172 #FFFFFF
+    inactive_workspace #8C8C8C #4C4C4C #888888
+    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
+    binding_mode       #b691d3 #A07CBC #FFFFFF
+  }
+  status_command i3status
+}
