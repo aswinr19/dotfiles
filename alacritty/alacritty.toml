@@ -595,29 +595,29 @@ mods = "Control"
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.hints]
-hide_when_typing = true
+#[mouse.hints]
+#hide_when_typing = true
 
-[[mouse.hints.enabled]]
-command = "xdg-open"
-post_processing = true
-regex = "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\" {-}\\^⟨⟩`]+"
+#[[mouse.hints.enabled]]
+#command = "xdg-open"
+#post_processing = true
+#regex = "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\" {-}\\^⟨⟩`]+"
 
-[mouse.hints.enabled.mouse]
-enabled = true
-mods = "Control"
+#[mouse.hints.enabled.mouse]
+#enabled = true
+#mods = "Control"
 
-[mouse.hints.double_click]
-threshold = 300
+#[mouse.hints.double_click]
+#threshold = 300
 
-[mouse.hints.triple_click]
-threshold = 300
+#[mouse.hints.triple_click]
+#threshold = 300
 
-[mouse.hints.url]
-modifiers = "None"
+#[mouse.hints.url]
+#modifiers = "None"
 
 #[mouse.hints.url.launcher]
-program = "open"
+#program = "open"
 
 [scrolling]
 history = 10000
