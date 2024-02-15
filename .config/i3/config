@@ -1,4 +1,4 @@
-# config starts here: #
+ config starts here: #
 font pango: Noto Sans Regular 10
 # set the mod key to the winkey:
 set $mod Mod4
@@ -212,7 +212,7 @@ for_window [class=Alacritty] focus
 for_window [class=Chromium] focus
 for_window [class=firefox] focus
 for_window [class=Thunar] focus
-for_window [class=Code] focus
+for_window [class=VS Codium] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
 for_window [class=Postman] focus
