@@ -177,7 +177,7 @@ bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && no
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal "
 set $ws2 "2: Browser" 
-set $ws3 "3: "
+set $ws3 "3: VS Codium"
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
 set $ws6 "6: Firefox"
@@ -198,7 +198,7 @@ set $ws10 "10: Image Viewer"
 assign [class="Alacritty"] $ws1
 assign [class="(?i)Chromium"] $ws2 
 assign [class="firefox"] $ws2
-assign [class="Code"] $ws3
+assign [class="VSCodium"] $ws3
 assign [class="Thunar"] $ws4
 assign [class="vlc"] $ws5
 #assign [class="mpv"] $ws5
