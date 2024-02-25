@@ -1,3 +1,7 @@
+import = [
+  "~/dotfiles/.config/alacritty/catppuccin-macchiatto.toml"
+]
+
 #enable_experimental_conpty_backend = false
 live_config_reload = true
 #"window.dynamic_title" = true
@@ -13,14 +17,23 @@ duration = 1
 draw_bold_text_with_bright_colors = true
 
 [colors.bright]
+#black = "#4C566A"
+#blue = "#90E0EF"
+#cyan = "#8FBCBB"
+#green = "#70E000"
+#magenta = "#B48EAD"
+#red = "#BF616A"
+#white = "#abb2bf"
+#yellow = "#EBCB8B"
 black = "#4C566A"
-blue = "#90E0EF"
-cyan = "#8FBCBB"
-green = "#70E000"
-magenta = "#B48EAD"
-red = "#BF616A"
-white = "#abb2bf"
-yellow = "#EBCB8B"
+blue = "#8AADF4"
+cyan = "#8BD5CA"
+green = "#A6DA95"
+magenta = "#B7BDF8"
+red = "#ED8796"
+white = "#ABB2BF"
+yellow = "#EED49F"
+
 
 [colors.normal]
 black = "#3B4252"
@@ -33,7 +46,8 @@ white = "#abb2bf"
 yellow = "#e5c07b"
 
 [colors.primary]
-background = "#282c34"
+#background = "#282c34"
+background = "#24273A"
 foreground = "#D8DEE9"
 
 [cursor]
@@ -51,7 +65,7 @@ render_timer = false
 size = 16
 
 [font.bold]
-family = "JetBrainsMono"
+family = "JetBrainsMonoNerdFontMono"
 style = "Bold"
 
 [font.glyph_offset]
@@ -63,7 +77,7 @@ family = "JetBrainsMono"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono"
+family = "JetBrainsMonoNerdFontMono"
 #family = "monospace"
 
 [font.offset]
