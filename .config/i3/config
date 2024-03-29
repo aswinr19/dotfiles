@@ -197,6 +197,7 @@ set $ws10 "10: Image Viewer"
 assign [class="Alacritty"] $ws1
 assign [class="(?i)Chromium"] $ws2 
 assign [class="firefox"] $ws2
+assign [class="VSCodium"] $ws3
 assign [class="obsidian"] $ws3
 assign [class="Thunar"] $ws4
 assign [class="vlc"] $ws5
@@ -211,6 +212,7 @@ for_window [class=Alacritty] focus
 for_window [class=Chromium] focus
 for_window [class=firefox] focus
 for_window [class=Thunar] focus
+for_window [class=VSCodium] focus
 for_window [class=obsidian] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
