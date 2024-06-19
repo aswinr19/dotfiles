@@ -170,7 +170,7 @@ set $ws2 "2: Browser"
 set $ws3 "3: Obsidian"
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
-set $ws6 "6: Firefox"
+set $ws6 "6: VS Code"
 set $ws7 "7: Spotify"
 set $ws8 "8: Telegram Desktop"
 set $ws9 "9: Pdf Reader"
@@ -188,10 +188,10 @@ set $ws10 "10: Image Viewer"
 assign [class="Alacritty"] $ws1
 assign [class="(?i)Chromium"] $ws2 
 assign [class="firefox"] $ws2
-assign [class="VSCodium"] $ws3
-assign [class="obsidian"] $ws3
+assign [class="Code"] $ws3
 assign [class="Thunar"] $ws4
 assign [class="vlc"] $ws5
+assign [class="obsidian"] $ws6
 assign [class="Spotify"] $ws7
 assign [class="Evince"] $ws9
 assign [class="Eog"] $ws10
@@ -200,7 +200,7 @@ for_window [class=Alacritty] focus
 for_window [class=Chromium] focus
 for_window [class=firefox] focus
 for_window [class=Thunar] focus
-for_window [class=VSCodium] focus
+for_window [class=Code] focus
 for_window [class=obsidian] focus
 for_window [class=vlc] focus
 for_window [class=mpv] focus
