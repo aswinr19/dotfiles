@@ -167,10 +167,10 @@ bindsym Print exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && no
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal "
 set $ws2 "2: Browser" 
-set $ws3 "3: Obsidian"
+set $ws3 "3: VS Code"
 set $ws4 "4: Files"
 set $ws5 "5: Media Player"
-set $ws6 "6: VS Code"
+set $ws6 "6: Obsidian"
 set $ws7 "7: Spotify"
 set $ws8 "8: Telegram Desktop"
 set $ws9 "9: Pdf Reader"
