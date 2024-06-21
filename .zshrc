@@ -47,3 +47,10 @@ source $ZSH/oh-my-zsh.sh
 #  alias bton="doas systemctl start bluetooth && blueberry"
 #  alias btoff="doas systemctl stop bluetooth"
 #  alias nvim="flatpak run io.neovim.nvim"
+
+# bun completions
+[ -s "/home/aswinr/.bun/_bun" ] && source "/home/aswinr/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
