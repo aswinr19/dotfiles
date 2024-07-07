@@ -1,4 +1,4 @@
-font pango: JetBrainsMonoNerdFontMono 10 
+font pango: monospace 10 
 #font pango: Noto Sans Regular 10
 # set the mod key to the winkey:
 set $mod Mod4
