@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="nvim  ~/.oh-my-zsh"
  alias upgrade="doas dnf update -y && doas dnf upgrade -y"
  alias autoremove="sudo doas autoremove -y"
+ alias sudo="doas"
  alias install="doas dnf install"
  alias gl="git log"
  alias ga="git add"
