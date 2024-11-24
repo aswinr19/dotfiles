@@ -1,9 +1,9 @@
-import = [
+general.import = [
   "~/dotfiles/.config/alacritty/catppuccin-macchiatto.toml"
 ]
 
 #enable_experimental_conpty_backend = false
-live_config_reload = true
+general.live_config_reload = true
 #"window.dynamic_title" = true
 #"window.opacity" = 0.6
 working_directory = "None"
