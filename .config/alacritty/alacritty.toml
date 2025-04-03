@@ -1,6 +1,6 @@
-general.import = [
-  "~/dotfiles/.config/alacritty/catppuccin-macchiatto.toml"
-]
+#general.import = [
+#  "~/dotfiles/.config/alacritty/catppuccin-macchiatto.toml"
+#]
 
 #enable_experimental_conpty_backend = false
 general.live_config_reload = true
@@ -47,8 +47,8 @@ yellow = "#e5c07b"
 
 [colors.primary]
 #background = "#282c34"
-background = "#24273A"
-foreground = "#D8DEE9"
+background = "#000000"
+foreground = "#FFFFFF"
 
 [cursor]
 style = "Block"
@@ -62,10 +62,10 @@ print_events = false
 render_timer = false
 
 [font]
-size = 16
+size = 20
 
 [font.bold]
-family = "monospace"
+family = "InconsolataNerdFont"
 style = "Bold"
 
 [font.glyph_offset]
@@ -73,11 +73,11 @@ x = 0
 y = 4
 
 [font.italic]
-family = "monospace"
+family = "InconsolataNerdFont"
 style = "Italic"
 
 [font.normal]
-family = "monospace"
+family = "InconsolataNerdFont"
 
 [font.offset]
 x = 0
