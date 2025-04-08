@@ -152,4 +152,14 @@ source "$OSH"/oh-my-bash.sh
 alias bashconfig="mate ~/.bashrc"
 alias ohmybash="mate ~/.oh-my-bash"
 
+# for ros2 humble
+source /opt/ros/humble/setup.bash
+
 eval "$(starship init bash)"
+
+# fnm
+FNM_PATH="/home/aswinr/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
