@@ -8,13 +8,13 @@ Ensure you have the following installed on your system
 #### git 
 
 ```
-sudo dnf install git -y
+$ sudo dnf install git -y
 ```
 
 #### GNU stow 
 
 ```
-sudo dnf install stow -y
+$ sudo dnf install stow -y
 ```
 
 ## Installation 
@@ -23,7 +23,7 @@ First, check out the dotfiles repo in your $HOME directory using git
 
 ```
 $ git clone  git@github.com:aswinr19/dotfiles.git
-cd dotfiles
+$ cd dotfiles
 ```
 then use [GNU stow](https://www.gnu.org/software/stow/) to create symlinks ( make sure to delete the default config files from their respective locations ) , also make sure to clone the repos of zsh plugins inside .oh-my-zsh/pulgins.
 
