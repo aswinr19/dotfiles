@@ -165,3 +165,4 @@ eval "$(starship init bash)"
 source /opt/ros/jazzy/setup.bash
 
 export GAZEBO_PLUGIN_PATH=/opt/ros/jazzy/lib/
+. "/home/aswin/.deno/env"
