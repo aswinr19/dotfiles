@@ -5,7 +5,7 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='/home/aswinr/.oh-my-bash'
+export OSH='/home/aswin/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -112,7 +112,6 @@ plugins=(
   zoxide
   sudo
   nvm
-
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -134,7 +133,7 @@ source "$OSH"/oh-my-bash.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -149,17 +148,20 @@ source "$OSH"/oh-my-bash.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias bashconfig="mate ~/.bashrc"
-alias ohmybash="mate ~/.oh-my-bash"
+alias vi="nvim"
+alias vim="nvim"
+alias bashconfig="nvim ~/.bashrc"
+alias ohmybash="nvim ~/.oh-my-bash"
 
-# for ros2 humble
-source /opt/ros/humble/setup.bash
+# zoxide (cd alternative)
+eval "$(zoxide init bash)"
 
+# starship for prompt styling
 eval "$(starship init bash)"
 
-# fnm
-FNM_PATH="/home/aswinr/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+. "$HOME/.local/bin/env"
+
+# ros jazzy installation
+source /opt/ros/jazzy/setup.bash
+
+export GAZEBO_PLUGIN_PATH=/opt/ros/jazzy/lib/
